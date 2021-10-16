@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gradesheet.css">
+  <link rel="stylesheet" href="gradesheet.js">
+  <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+ 
+  <title>Moat Academy Grade Sheet</title>
+</head>
+
+
+<body>
+<div>
+   <!----------Table for result display-->
+  <table border="2" width="70%">
+    <tr>
+    <th>Subject</th>
+    <th>Score</th>
+    <th>Grade</th>
+    </tr>
+    <tr >
+      <th >English</th>
+      <td width="40%"><input type="text" id="inputscore"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Maths</th>
+      <td><input type="text" id="inputscore"></td>
+      <td id="grades" ></td>
+    </tr>
+    <tr>
+      <th>Chemistry</th>
+      <td><input type="text" id="inputscore"></td>
+      <td id="grades"></td>
+    </tr>
+    <tr>
+      <th>Biology</th>
+      <td><input type="text" id="inputscore"></td>
+      <td id="grades"></td>
+    </tr>
+
+    <tr>
+      <th>French</th>
+      <td><input type="text" id="inputscore"></td>
+      <td id="grades"></td>
+    </tr>
+
+  </table>
+  <br>
+<!----remark and total section-->
+<div>
+  <P>Total is </P>
+<p>
+<button class="button btn btn-primary" id="getresult" onclick="">Get Result</button>
+</p>
+
+<p>Remarks</p>
+
+<p>Average</p>
+
+</div>
+
+<script>
+
+  var scoreF = 'F'
+  var scoreE = 'E'
+  var scoreD = 'D'
+  var scoreC = 'C'
+  var scoreB = 'B'
+  var scoreA = 'A'
+
+  if (inputscore<40){
+          var scoreF = document.getElementById(inputscore).innerHTML
+         var grades = document.write('F')
+         
+  }
+ 
+
+
+
+  /*
+Score < 40 : F
+Score >40 and score < = 45 : E
+Score > 45 and Score < 50: D
+Score > 50 and Score < 60 : C
+Score >=60 and Score <=69 : B
+Score >= 70 : A 
+
+*/
+
+
+
+ 
+
+
+
+</script>
+
+
+</div>
+
+      
+
+
+            
+
+        
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
