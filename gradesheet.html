@@ -24,28 +24,28 @@
     <tr >
       <th >English</th>
       <td width="40%"><input type="text" id="inputscore"></td>
-      <td id="englishgrades"></td>
+      <td class="Grade" ></td>
     </tr>
     <tr>
       <th>Maths</th>
       <td><input type="text" id="inputscore"></td>
-      <td id="mathsgrades" ></td>
+      <td class="Grade"></td>
     </tr>
     <tr>
       <th>Chemistry</th>
       <td><input type="text" id="inputscore"></td>
-      <td id="chemistrygrades"></td>
+      <td class="Grade"></td>
     </tr>
     <tr>
       <th>Biology</th>
       <td><input type="text" id="inputscore"></td>
-      <td id="biologygrades"></td>
+      <td class="Grade"></td>
     </tr>
 
     <tr>
       <th>French</th>
       <td><input type="text" id="inputscore"></td>
-      <td id="frenchgrades"></td>
+      <td class="Grade"></td>
     </tr>
 
   </table>
@@ -54,29 +54,59 @@
 <div>
   <P>Total is </P>
 <p>
-<button class="button btn btn-primary" id="getresult" onclick="grades">Get Result</button>
+<button class="button btn btn-primary" id="getresult" onclick=result>Get Result</button>
 </p>
 
 <p>Remarks</p>
 
-<p>Average</p>
+<p id="writeavg">Average</p>
 
 </div>
 
 <script>
 
-  var scoreF = 'F'
-  var scoreE = 'E'
-  var scoreD = 'D'
-  var scoreC = 'C'
-  var scoreB = 'B'
-  var scoreA = 'A'
+  var subjects = ['English', 'Maths', 'Chemistry', 'Biology', 'French'];
+  var score = inputscore
+  var average = 38.6;
+  var result= getresult
 
-  if (inputscore<40){
-          var scoreF = document.getElementById(inputscore).innerHTML
-         var grades = document.write('F')
-         
+document.getElementById(writeavg).innerHTML= 38.6;
+
+  if (score<40){
+    result = document.getElementById(Grade).innerHTML='F';
   }
+  else if (score >40 && score <= 45){
+    result =document.getElementById(Grade).innerHTML='E';
+
+  }
+  else if (score>45 && score<50){
+    result =document.getElementById(Grade).innerHTML='D';
+  }
+else if (score>50 && score < 60){
+  result =document.getElementById(Grade).innerHTML='C';
+}
+else if (score>60 && score <69){
+  result =document.getElementById(Grade).innerHTML='B';
+}
+else if (score>=70){
+  result =document.getElementById(Grade).innerHTML='A';
+}
+
+
+
+
+
+
+
+
+
+
+
+ // if (inputscore<40){
+  //        var scoreF = document.getElementById(inputscore).innerHTML
+ //        var grades = document.write('F')
+         
+ // }
  
 
 
